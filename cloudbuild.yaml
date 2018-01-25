@@ -5,8 +5,8 @@ steps:
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['set', 'image', "deployment/php", "php=gcr.io/$PROJECT_ID/php:$SHORT_SHA"]
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-linyen'
+  - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-c'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-test'
   wait_for: ['build']
 images:
 - 'gcr.io/$PROJECT_ID/php:$SHORT_SHA'
