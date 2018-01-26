@@ -52,11 +52,11 @@ Setting clusters|gcloud container clusters get-credentials [CLUSTER-NAME]
 用設定檔移除 deployment|kubectl delete -f [FILE NAME]
 查看 deployment|kubectl get deployment
 查看 pods|kubectl get pod
-移除 pod|kubectl delete pod [POD NAME]
+移除 pod (如果有 deployment，pod 被移除後會自動重啟)|kubectl delete pod [POD NAME]
 用設定檔建立 services|kubectl create -f [FILE NAME]
 用設定檔移除 services|kubectl delete -f [FILE NAME]
 查看 services|kubectl get services
-移除 services (如果有 deployment，service 被移除後會自動重啟)|kubectl delete services [SERVICES NAME]
+移除 services|kubectl delete services [SERVICES NAME]
 進機器|kubectl exec -it [POD NAME] bash
 
 
